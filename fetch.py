@@ -98,7 +98,7 @@ def job():
     extension = ".json"
 
     file_name =  current_date_and_time_string + extension
-    df.to_json('f'+ file_name, orient = 'split', compression = 'infer', index = 'true')
+    df.to_json('f/'+ file_name, orient = 'split', compression = 'infer', index = 'true')
     
     ### shedule automatic update
 # while True:
