@@ -92,7 +92,7 @@ def job():
 
     text, chat = get_last_chat_id_and_text(get_updates())
     send_message(text, chat)
-    
+    df.to_json('file.json', orient = 'split', compression = 'infer', index = 'true')
     ### shedule automatic update
 # while True:
     
