@@ -10,6 +10,7 @@ import json
 import schedule
 import datetime
 from time import sleep
+import os
 
 
 def job():
@@ -92,7 +93,13 @@ def job():
 
     text, chat = get_last_chat_id_and_text(get_updates())
     send_message(text, chat)
-    df.to_json('file.json', orient = 'split', compression = 'infer', index = 'true')
+    current_date_and_time = datetime.datetime.now()
+    current_date_and_time_string = str(current_date_and_time)
+    extension = ".json"
+
+    file_name =  current_date_and_time_string + extension
+    df.to_json('f'+ file_name, orient = 'split', compression = 'infer', index = 'true')
+    
     ### shedule automatic update
 # while True:
     
