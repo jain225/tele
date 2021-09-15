@@ -52,6 +52,13 @@ while True:
 
 
     #df=df.Temp.astype(float)
+    current_date_and_time = datetime.datetime.now()
+    current_date_and_time_string = str(current_date_and_time)
+    extension = ".json"
+
+    file_name =  current_date_and_time_string + extension
+    df.to_json(file_name, orient = 'split', compression = 'infer', index = 'true')
+
 
 
     #print(table)
