@@ -10,6 +10,7 @@ import json
 import schedule
 import datetime
 from time import sleep
+from datetime import datetime as dt
 
 
 
@@ -93,6 +94,10 @@ while True:
 
     text, chat = get_last_chat_id_and_text(get_updates())
     send_message(text, chat)
+    
+    
+    ti=dt.now().strftime("%Y-%b-%d_%H:%M:%S")+'filter.csv'
+    df.to_csv('/filter'+ ti ,header =False,index = False)
 
 
     
