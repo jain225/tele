@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 #import telegram
 #import Updater, MessageHandler, Filters, CallbackQueryHandler
 from typing import Dict
+import pandas as pd
+import requests
 import json 
 import schedule
 import datetime
@@ -52,13 +54,6 @@ while True:
 
 
     #df=df.Temp.astype(float)
-    current_date_and_time = datetime.datetime.now()
-    current_date_and_time_string = str(current_date_and_time)
-    extension = ".json"
-
-    file_name =  current_date_and_time_string + extension
-    df.to_json(file_name, orient = 'split', compression = 'infer', index = 'true')
-
 
 
     #print(table)
@@ -98,11 +93,9 @@ while True:
 
     text, chat = get_last_chat_id_and_text(get_updates())
     send_message(text, chat)
-    
-    exit()
 
 
     
     ### shedule automatic update
-    sleep(901)   
+    sleep(900)   
 
