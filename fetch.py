@@ -59,7 +59,7 @@ while True:
 
     #print(table)
 
-    TOKEN = "1732539858:AAEfJhYvXkycMd4Oc4-uDDiUFnxTuGZp3rY"
+    TOKEN = "5141075217:AAF4UUh7a3YVMYtK14HQjgazo0MZcgBF8Nk"
     URL =  "https://api.telegram.org/bot{}/".format(TOKEN)
     def get_url(url):
      response = requests.get(url)
@@ -83,7 +83,7 @@ while True:
      #num_updates = len(updates["result"])
      #last_update = num_updates - 1
      text = df#updates["result"][last_update]["message"]["text"]
-     chat_id = -1001295106517#updates["result"][last_update]["message"]["chat"]["id"]
+     chat_id = 5000008763#updates["result"][last_update]["message"]["chat"]["id"]
      return (text, chat_id)
 
 
