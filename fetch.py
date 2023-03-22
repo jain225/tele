@@ -97,7 +97,7 @@ while True:
     
     
     ti=dt.now().strftime("%Y-%b-%d_%H:%M:%S")+'filter.csv'
-    df.to_csv('/filter'+ ti ,header =False,index = False)
+    #df.to_csv('/filter'+ ti ,header =False,index = False)
 
 
     
