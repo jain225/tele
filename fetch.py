@@ -102,5 +102,5 @@ while True:
 
     
     ### shedule automatic update
-    sleep(900)   
+    #sleep(900)   
 
